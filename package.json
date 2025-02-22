@@ -1,0 +1,25 @@
+{
+  "name": "workers-sanctions-script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "split": "rimraf output/* && ts-node splitFile.ts input.csv",
+    "upload-dry-run": "ts-node uploadFiles.ts input csv --dry-run",
+    "upload": "ts-node uploadFiles.ts input csv"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "form-data": "^4.0.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "rimraf": "^5.0.5"
+  }
+}
